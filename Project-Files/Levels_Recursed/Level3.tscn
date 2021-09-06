@@ -1,0 +1,1725 @@
+[gd_scene load_steps=70 format=2]
+
+[ext_resource path="res://Levels_Recursed/assets/door1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Tilemaps/Tilemap_1all.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Tilemaps/Tilemap_2all.png" type="Texture" id=3]
+[ext_resource path="res://Assets/LighOrb2.png" type="Texture" id=4]
+[ext_resource path="res://Interactable/MovingTrap2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemy/EnemyGhost.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Interactable/Item.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Enemy/Ghost.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Interactable/MovingTrap.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Torch.tres" type="Texture" id=10]
+[ext_resource path="res://Levels_Recursed/Level3.gd" type="Script" id=11]
+[ext_resource path="res://Levels_Recursed/Door3_2.gd" type="Script" id=12]
+[ext_resource path="res://Levels_Recursed/assets/door2.png" type="Texture" id=13]
+[ext_resource path="res://Levels_Recursed/Door4.gd" type="Script" id=14]
+[ext_resource path="res://Levels_Recursed/Door4_2.gd" type="Script" id=15]
+[ext_resource path="res://Levels_Recursed/Door5.gd" type="Script" id=16]
+[ext_resource path="res://Levels_Recursed/Door8_2.gd" type="Script" id=17]
+[ext_resource path="res://Levels_Recursed/Door0.gd" type="Script" id=18]
+[ext_resource path="res://UI/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=19]
+[ext_resource path="res://Assets/Tilemaps/Vertical_Painting.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Tilemaps/chandelier.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Tilemaps/trap3rail.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Tilemaps/window.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Tilemaps/Horizontal_Painting.png" type="Texture" id=24]
+[ext_resource path="res://Levels_Recursed/Menu.mp3" type="AudioStream" id=25]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 64, 32, 0, 32, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 64, 192, 0, 192, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 64, 64, 32, 64, 32, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 32, 64, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 192, 64, 0, 64, 0, 0, 192, 0 )
+
+[sub_resource type="TileSet" id=9]
+0/name = "Tilemap_1all.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tilemap_1all.png 1"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 64, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 1 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "Tilemap_1all.png 2"
+2/texture = ExtResource( 2 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 128, 0, 64, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Tilemap_1all.png 3"
+3/texture = ExtResource( 2 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 64, 64, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 5 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "Tilemap_1all.png 4"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 64, 64, 64, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Tilemap_1all.png 5"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 128, 64, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape = SubResource( 6 )
+5/shape_one_way = false
+5/shape_one_way_margin = 1.0
+5/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+5/z_index = 0
+6/name = "Tilemap_1all.png 6"
+6/texture = ExtResource( 2 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 0, 128, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Tilemap_1all.png 7"
+7/texture = ExtResource( 2 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 64, 128, 64, 64 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape = SubResource( 7 )
+7/shape_one_way = false
+7/shape_one_way_margin = 1.0
+7/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+7/z_index = 0
+8/name = "Tilemap_1all.png 8"
+8/texture = ExtResource( 2 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 128, 128, 64, 64 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Tilemap_2all.png 9"
+9/texture = ExtResource( 3 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 0, 192, 192, 64 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape = SubResource( 8 )
+9/shape_one_way = false
+9/shape_one_way_margin = 1.0
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+9/z_index = 0
+10/name = "Tilemap_1all.png 10"
+10/texture = ExtResource( 2 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 192, 0, 64, 192 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape = SubResource( 2 )
+10/shape_one_way = false
+10/shape_one_way_margin = 1.0
+10/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+10/z_index = 0
+11/name = "Tilemap_2all.png 11"
+11/texture = ExtResource( 3 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 192, 192, 64, 64 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape = SubResource( 3 )
+11/shape_one_way = false
+11/shape_one_way_margin = 1.0
+11/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+11/z_index = 0
+12/name = "Tilemap_1all.png 12"
+12/texture = ExtResource( 2 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 192, 192, 64, 64 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape = SubResource( 4 )
+12/shape_one_way = false
+12/shape_one_way_margin = 1.0
+12/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+12/z_index = 0
+
+[sub_resource type="Animation" id=10]
+resource_name = "close_door"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "open_door"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 13 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 53.8344, 83.8037 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 60
+font_data = ExtResource( 19 )
+
+[sub_resource type="Animation" id=14]
+resource_name = "close_door"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "open_door"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 13 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 53.8344, 83.8037 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 60
+font_data = ExtResource( 19 )
+
+[sub_resource type="Animation" id=18]
+resource_name = "close_door"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "open_door"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 13 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 53.8344, 83.8037 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 60
+font_data = ExtResource( 19 )
+
+[sub_resource type="Animation" id=22]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 13 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 53.8344, 83.8037 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 60
+font_data = ExtResource( 19 )
+
+[sub_resource type="Animation" id=26]
+resource_name = "close_door"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "open_door"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 13 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=28]
+extents = Vector2( 53.8344, 83.8037 )
+
+[sub_resource type="DynamicFont" id=29]
+size = 60
+font_data = ExtResource( 19 )
+
+[sub_resource type="Animation" id=30]
+resource_name = "close_door"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "open_door"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 13 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 53.8344, 83.8037 )
+
+[sub_resource type="DynamicFont" id=33]
+size = 60
+font_data = ExtResource( 19 )
+
+[sub_resource type="TileSet" id=34]
+0/name = "Torch.tres 0"
+0/texture = ExtResource( 10 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "chandelier.png 1"
+1/texture = ExtResource( 21 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 64, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Horizontal_Painting.png 2"
+2/texture = ExtResource( 24 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 32, 128, 64 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "trap3rail.png 3"
+3/texture = ExtResource( 22 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 0, 0, 64, 192 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "trap3rail.png 4"
+4/texture = ExtResource( 22 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 64, 128, 192, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "trap3rail.png 5"
+5/texture = ExtResource( 22 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 192, 64, 64, 64 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "trap3rail.png 6"
+6/texture = ExtResource( 22 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 128, 64, 64, 64 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Vertical_Painting.png 7"
+7/texture = ExtResource( 20 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 32, 0, 64, 128 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "window.png 8"
+8/texture = ExtResource( 23 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 64, 128 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "window.png 9"
+9/texture = ExtResource( 23 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 64, 0, 64, 128 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "window.png 10"
+10/texture = ExtResource( 23 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 128, 0, 64, 128 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "window.png 11"
+11/texture = ExtResource( 23 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 192, 0, 64, 128 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+
+[sub_resource type="GDScript" id=35]
+script/source = "extends Area2D
+
+export onready var operan : String
+export var number : float
+var player_in : bool = false
+signal body_enter
+
+func _ready():
+	$Label2.visible = false
+	sprite()
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if operan != \"log\":
+		$Label.text = str(number)
+	elif operan == \"log\":
+		$Label.text = \"log\"
+	sprite()
+	if player_in == true && Input.is_action_just_pressed(\"Use\"):
+		calculate()
+		queue_free()
+
+func sprite():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+	
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+
+	elif operan == \"-\":
+	
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+	
+
+func calculate():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+		Global.key = Global.key * number
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+		Global.key = Global.key / number
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+		Global.key = Global.key + number
+	elif operan == \"-\":
+		Global.key = Global.key - number
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+		Global.key = log10(Global.key)
+
+func log10(a):
+	return (log(a)/log(10))
+
+func _on_Item_body_entered(body):
+	if \"Player\" in body.name:
+		$Label2.visible = true
+		player_in = true
+		
+
+func _on_Item_body_exited(body):
+	if \"Player\" in body.name:
+		$Label2.visible = false
+		player_in = false
+"
+
+[sub_resource type="GDScript" id=36]
+script/source = "extends Area2D
+
+export onready var operan : String
+export var number : float
+var player_in : bool = false
+signal body_enter
+
+func _ready():
+	$Label2.visible = false
+	sprite()
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if operan != \"log\":
+		$Label.text = str(number)
+	elif operan == \"log\":
+		$Label.text = \"log\"
+	sprite()
+	if player_in == true && Input.is_action_just_pressed(\"Use\"):
+		calculate()
+		queue_free()
+
+func sprite():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+	
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+
+	elif operan == \"-\":
+	
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+	
+
+func calculate():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+		Global.key = Global.key * number
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+		Global.key = Global.key / number
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+		Global.key = Global.key + number
+	elif operan == \"-\":
+		Global.key = Global.key - number
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+		Global.key = log10(Global.key)
+
+func log10(a):
+	return (log(a)/log(10))
+
+func _on_Item_body_entered(body):
+	if \"Player\" in body.name:
+		$Label2.visible = true
+		player_in = true
+		
+
+func _on_Item_body_exited(body):
+	if \"Player\" in body.name:
+		$Label2.visible = false
+		player_in = false
+"
+
+[sub_resource type="GDScript" id=37]
+script/source = "extends Area2D
+
+export onready var operan : String
+export var number : float
+var player_in : bool = false
+signal body_enter
+
+func _ready():
+	$Label2.visible = false
+	sprite()
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if operan != \"log\":
+		$Label.text = str(number)
+	elif operan == \"log\":
+		$Label.text = \"log\"
+	sprite()
+	if player_in == true && Input.is_action_just_pressed(\"Use\"):
+		calculate()
+		queue_free()
+
+func sprite():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+	
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+
+	elif operan == \"-\":
+	
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+	
+
+func calculate():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+		Global.key = Global.key * number
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+		Global.key = Global.key / number
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+		Global.key = Global.key + number
+	elif operan == \"-\":
+		Global.key = Global.key - number
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+		Global.key = log10(Global.key)
+
+func log10(a):
+	return (log(a)/log(10))
+
+func _on_Item_body_entered(body):
+	if \"Player\" in body.name:
+		$Label2.visible = true
+		player_in = true
+		
+
+func _on_Item_body_exited(body):
+	if \"Player\" in body.name:
+		$Label2.visible = false
+		player_in = false
+"
+
+[sub_resource type="GDScript" id=38]
+script/source = "extends Area2D
+
+export onready var operan : String
+export var number : float
+var player_in : bool = false
+signal body_enter
+
+func _ready():
+	$Label2.visible = false
+	sprite()
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if operan != \"log\":
+		$Label.text = str(number)
+	elif operan == \"log\":
+		$Label.text = \"log\"
+	sprite()
+	if player_in == true && Input.is_action_just_pressed(\"Use\"):
+		calculate()
+		queue_free()
+
+func sprite():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+	
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+
+	elif operan == \"-\":
+	
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+	
+
+func calculate():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+		Global.key = Global.key * number
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+		Global.key = Global.key / number
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+		Global.key = Global.key + number
+	elif operan == \"-\":
+		Global.key = Global.key - number
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+		Global.key = log10(Global.key)
+
+func log10(a):
+	return (log(a)/log(10))
+
+func _on_Item_body_entered(body):
+	if \"Player\" in body.name:
+		$Label2.visible = true
+		player_in = true
+		
+
+func _on_Item_body_exited(body):
+	if \"Player\" in body.name:
+		$Label2.visible = false
+		player_in = false
+"
+
+[sub_resource type="GDScript" id=39]
+script/source = "extends Area2D
+
+export onready var operan : String
+export var number : float
+var player_in : bool = false
+signal body_enter
+
+func _ready():
+	$Label2.visible = false
+	sprite()
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if operan != \"log\":
+		$Label.text = str(number)
+	elif operan == \"log\":
+		$Label.text = \"log\"
+	sprite()
+	if player_in == true && Input.is_action_just_pressed(\"Use\"):
+		calculate()
+		queue_free()
+
+func sprite():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+	
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+
+	elif operan == \"-\":
+	
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+	
+
+func calculate():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+		Global.key = Global.key * number
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+		Global.key = Global.key / number
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+		Global.key = Global.key + number
+	elif operan == \"-\":
+		Global.key = Global.key - number
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+		Global.key = log10(Global.key)
+
+func log10(a):
+	return (log(a)/log(10))
+
+func _on_Item_body_entered(body):
+	if \"Player\" in body.name:
+		$Label2.visible = true
+		player_in = true
+		
+
+func _on_Item_body_exited(body):
+	if \"Player\" in body.name:
+		$Label2.visible = false
+		player_in = false
+"
+
+[sub_resource type="GDScript" id=40]
+script/source = "extends Area2D
+
+export onready var operan : String
+export var number : float
+var player_in : bool = false
+signal body_enter
+
+func _ready():
+	$Label2.visible = false
+	sprite()
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if operan != \"log\":
+		$Label.text = str(number)
+	elif operan == \"log\":
+		$Label.text = \"log\"
+	sprite()
+	if player_in == true && Input.is_action_just_pressed(\"Use\"):
+		calculate()
+		queue_free()
+
+func sprite():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+	
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+
+	elif operan == \"-\":
+	
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+	
+
+func calculate():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+		Global.key = Global.key * number
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+		Global.key = Global.key / number
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+		Global.key = Global.key + number
+	elif operan == \"-\":
+		Global.key = Global.key - number
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+		Global.key = log10(Global.key)
+
+func log10(a):
+	return (log(a)/log(10))
+
+func _on_Item_body_entered(body):
+	if \"Player\" in body.name:
+		$Label2.visible = true
+		player_in = true
+		
+
+func _on_Item_body_exited(body):
+	if \"Player\" in body.name:
+		$Label2.visible = false
+		player_in = false
+"
+
+[sub_resource type="GDScript" id=41]
+script/source = "extends Area2D
+
+export onready var operan : String
+export var number : float
+var player_in : bool = false
+signal body_enter
+
+func _ready():
+	$Label2.visible = false
+	sprite()
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if operan != \"log\":
+		$Label.text = str(number)
+	elif operan == \"log\":
+		$Label.text = \"log\"
+	sprite()
+	if player_in == true && Input.is_action_just_pressed(\"Use\"):
+		calculate()
+		queue_free()
+
+func sprite():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+	
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+
+	elif operan == \"-\":
+	
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+	
+
+func calculate():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+		Global.key = Global.key * number
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+		Global.key = Global.key / number
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+		Global.key = Global.key + number
+	elif operan == \"-\":
+		Global.key = Global.key - number
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+		Global.key = log10(Global.key)
+
+func log10(a):
+	return (log(a)/log(10))
+
+func _on_Item_body_entered(body):
+	if \"Player\" in body.name:
+		$Label2.visible = true
+		player_in = true
+		
+
+func _on_Item_body_exited(body):
+	if \"Player\" in body.name:
+		$Label2.visible = false
+		player_in = false
+"
+
+[sub_resource type="GDScript" id=42]
+script/source = "extends Area2D
+
+export onready var operan : String
+export var number : float
+var player_in : bool = false
+signal body_enter
+
+func _ready():
+	$Label2.visible = false
+	sprite()
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if operan != \"log\":
+		$Label.text = str(number)
+	elif operan == \"log\":
+		$Label.text = \"log\"
+	sprite()
+	if player_in == true && Input.is_action_just_pressed(\"Use\"):
+		calculate()
+		queue_free()
+
+func sprite():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+	
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+
+	elif operan == \"-\":
+	
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+	
+
+func calculate():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+		Global.key = Global.key * number
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+		Global.key = Global.key / number
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+		Global.key = Global.key + number
+	elif operan == \"-\":
+		Global.key = Global.key - number
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+		Global.key = log10(Global.key)
+
+func log10(a):
+	return (log(a)/log(10))
+
+func _on_Item_body_entered(body):
+	if \"Player\" in body.name:
+		$Label2.visible = true
+		player_in = true
+		
+
+func _on_Item_body_exited(body):
+	if \"Player\" in body.name:
+		$Label2.visible = false
+		player_in = false
+"
+
+[sub_resource type="GDScript" id=43]
+script/source = "extends Area2D
+
+export onready var operan : String
+export var number : float
+var player_in : bool = false
+signal body_enter
+
+func _ready():
+	$Label2.visible = false
+	sprite()
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if operan != \"log\":
+		$Label.text = str(number)
+	elif operan == \"log\":
+		$Label.text = \"log\"
+	sprite()
+	if player_in == true && Input.is_action_just_pressed(\"Use\"):
+		calculate()
+		queue_free()
+
+func sprite():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+	
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+
+	elif operan == \"-\":
+	
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+	
+
+func calculate():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+		Global.key = Global.key * number
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+		Global.key = Global.key / number
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+		Global.key = Global.key + number
+	elif operan == \"-\":
+		Global.key = Global.key - number
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+		Global.key = log10(Global.key)
+
+func log10(a):
+	return (log(a)/log(10))
+
+func _on_Item_body_entered(body):
+	if \"Player\" in body.name:
+		$Label2.visible = true
+		player_in = true
+		
+
+func _on_Item_body_exited(body):
+	if \"Player\" in body.name:
+		$Label2.visible = false
+		player_in = false
+"
+
+[sub_resource type="GDScript" id=44]
+script/source = "extends Area2D
+
+export onready var operan : String
+export var number : float
+var player_in : bool = false
+signal body_enter
+
+func _ready():
+	$Label2.visible = false
+	sprite()
+	
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if operan != \"log\":
+		$Label.text = str(number)
+	elif operan == \"log\":
+		$Label.text = \"log\"
+	sprite()
+	if player_in == true && Input.is_action_just_pressed(\"Use\"):
+		calculate()
+		queue_free()
+
+func sprite():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+	
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+
+	elif operan == \"-\":
+	
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+	
+
+func calculate():
+	if operan == \"x\":
+		$AnimatedSprite.play(\"Multiply\")
+		Global.key = Global.key * number
+	elif operan == \"/\":
+		$AnimatedSprite.play(\"Divide\")
+		Global.key = Global.key / number
+	elif operan == \"+\":
+		$AnimatedSprite.play(\"Plus\")
+		Global.key = Global.key + number
+	elif operan == \"-\":
+		Global.key = Global.key - number
+		$AnimatedSprite.play(\"Minus\")
+	elif operan == \"log\":
+		$AnimatedSprite.play(\"Log\")
+		Global.key = log10(Global.key)
+
+func log10(a):
+	return (log(a)/log(10))
+
+func _on_Item_body_entered(body):
+	if \"Player\" in body.name:
+		$Label2.visible = true
+		player_in = true
+		
+
+func _on_Item_body_exited(body):
+	if \"Player\" in body.name:
+		$Label2.visible = false
+		player_in = false
+"
+
+[node name="Level3" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="Map" type="TileMap" parent="."]
+tile_set = SubResource( 9 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 10, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0, 19, 1, 0, 20, 1, 0, 21, 1, 0, 22, 1, 0, 23, 1, 0, 24, 1, 0, 25, 1, 0, 26, 1, 0, 27, 1, 0, 28, 1, 0, 29, 2, 0, 65536, 3, 0, 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 65545, 4, 0, 65546, 4, 0, 65547, 4, 0, 65548, 4, 0, 65549, 4, 0, 65550, 4, 0, 65551, 4, 0, 65552, 4, 0, 65553, 4, 0, 65554, 4, 0, 65555, 4, 0, 65556, 4, 0, 65557, 4, 0, 65558, 4, 0, 65559, 4, 0, 65560, 4, 0, 65561, 4, 0, 65562, 4, 0, 65563, 4, 0, 65564, 4, 0, 65565, 5, 0, 131072, 3, 0, 131073, 4, 0, 131074, 4, 0, 131075, 4, 0, 131076, 4, 0, 131077, 4, 0, 131078, 4, 0, 131079, 4, 0, 131081, 4, 0, 131082, 4, 0, 131083, 4, 0, 131084, 4, 0, 131085, 4, 0, 131086, 4, 0, 131087, 4, 0, 131088, 4, 0, 131089, 4, 0, 131090, 4, 0, 131091, 4, 0, 131092, 4, 0, 131093, 4, 0, 131094, 4, 0, 131095, 4, 0, 131096, 4, 0, 131097, 4, 0, 131098, 4, 0, 131099, 4, 0, 131100, 4, 0, 131101, 5, 0, 196608, 3, 0, 196609, 4, 0, 196610, 4, 0, 196611, 4, 0, 196612, 4, 0, 196613, 9, 0, 196616, 10, 0, 196617, 4, 0, 196618, 4, 0, 196619, 4, 0, 196620, 4, 0, 196621, 4, 0, 196622, 4, 0, 196623, 4, 0, 196624, 4, 0, 196625, 4, 0, 196626, 4, 0, 196627, 4, 0, 196628, 4, 0, 196629, 4, 0, 196630, 4, 0, 196631, 4, 0, 196632, 4, 0, 196633, 4, 0, 196634, 4, 0, 196635, 4, 0, 196636, 4, 0, 196637, 5, 0, 262144, 3, 0, 262145, 4, 0, 262146, 4, 0, 262147, 4, 0, 262148, 4, 0, 262149, 4, 0, 262150, 4, 0, 262151, 4, 0, 262153, 4, 0, 262154, 4, 0, 262155, 4, 0, 262156, 4, 0, 262157, 4, 0, 262158, 9, 0, 262161, 9, 0, 262164, 9, 0, 262167, 9, 0, 262170, 9, 0, 262173, 11, 0, 327680, 3, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, 327687, 4, 0, 327689, 4, 0, 327690, 4, 0, 327691, 4, 0, 327692, 4, 0, 327693, 4, 0, 327694, 4, 0, 327695, 4, 0, 327696, 12, 0, 327697, 4, 0, 327698, 4, 0, 327699, 4, 0, 327700, 4, 0, 327701, 4, 0, 327702, 4, 0, 327703, 4, 0, 327704, 4, 0, 327705, 4, 0, 327706, 4, 0, 327707, 4, 0, 327708, 4, 0, 327709, 5, 0, 393216, 3, 0, 393217, 4, 0, 393218, 4, 0, 393219, 4, 0, 393220, 4, 0, 393221, 4, 0, 393222, 4, 0, 393223, 4, 0, 393224, 10, 0, 393225, 11, 0, 393226, 4, 0, 393227, 4, 0, 393228, 4, 0, 393229, 4, 0, 393230, 4, 0, 393231, 4, 0, 393232, 10, 0, 393233, 4, 0, 393234, 4, 0, 393235, 4, 0, 393236, 4, 0, 393237, 4, 0, 393238, 4, 0, 393239, 4, 0, 393240, 4, 0, 393241, 4, 0, 393242, 4, 0, 393243, 4, 0, 393244, 4, 0, 393245, 5, 0, 458752, 9, 0, 458755, 4, 0, 458756, 4, 0, 458757, 4, 0, 458758, 4, 0, 458759, 4, 0, 458761, 4, 0, 458762, 4, 0, 458763, 4, 0, 458764, 4, 0, 458765, 4, 0, 458766, 4, 0, 458767, 4, 0, 458769, 4, 0, 458770, 4, 0, 458771, 4, 0, 458772, 4, 0, 458773, 4, 0, 458774, 4, 0, 458775, 4, 0, 458776, 4, 0, 458777, 4, 0, 458778, 4, 0, 458779, 4, 0, 458780, 4, 0, 458781, 5, 0, 524288, 4, 0, 524289, 4, 0, 524290, 4, 0, 524291, 4, 0, 524292, 4, 0, 524293, 4, 0, 524294, 4, 0, 524295, 4, 0, 524297, 4, 0, 524298, 4, 0, 524299, 4, 0, 524300, 4, 0, 524301, 4, 0, 524302, 4, 0, 524303, 4, 0, 524305, 4, 0, 524306, 4, 0, 524307, 4, 0, 524308, 4, 0, 524309, 4, 0, 524310, 4, 0, 524311, 4, 0, 524312, 4, 0, 524313, 4, 0, 524314, 4, 0, 524315, 4, 0, 524316, 4, 0, 524317, 5, 0, 589824, 3, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 589831, 4, 0, 589832, 10, 0, 589833, 4, 0, 589834, 4, 0, 589835, 4, 0, 589836, 4, 0, 589837, 4, 0, 589838, 4, 0, 589839, 4, 0, 589840, 10, 0, 589841, 4, 0, 589842, 4, 0, 589843, 4, 0, 589844, 4, 0, 589845, 4, 0, 589846, 4, 0, 589847, 4, 0, 589848, 4, 0, 589849, 4, 0, 589850, 4, 0, 589851, 4, 0, 589852, 4, 0, 589853, 5, 0, 655360, 3, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 4, 0, 655365, 4, 0, 655366, 4, 0, 655367, 4, 0, 655369, 4, 0, 655370, 4, 0, 655371, 4, 0, 655372, 4, 0, 655373, 4, 0, 655374, 4, 0, 655375, 4, 0, 655377, 4, 0, 655378, 4, 0, 655379, 4, 0, 655380, 4, 0, 655381, 9, 0, 655384, 9, 0, 655387, 9, 0, 720896, 3, 0, 720897, 4, 0, 720898, 4, 0, 720899, 4, 0, 720900, 4, 0, 720901, 9, 0, 720905, 9, 0, 720908, 4, 0, 720909, 4, 0, 720910, 4, 0, 720911, 4, 0, 720913, 4, 0, 720914, 4, 0, 720915, 4, 0, 720916, 4, 0, 720917, 4, 0, 720918, 4, 0, 720919, 4, 0, 720920, 4, 0, 720921, 4, 0, 720922, 4, 0, 720923, 4, 0, 720924, 4, 0, 720925, 5, 0, 786432, 3, 0, 786433, 4, 0, 786434, 4, 0, 786435, 4, 0, 786436, 4, 0, 786437, 4, 0, 786438, 4, 0, 786439, 4, 0, 786440, 10, 0, 786441, 4, 0, 786442, 4, 0, 786443, 4, 0, 786444, 4, 0, 786445, 4, 0, 786446, 4, 0, 786447, 4, 0, 786448, 10, 0, 786449, 4, 0, 786450, 4, 0, 786451, 4, 0, 786452, 4, 0, 786453, 4, 0, 786454, 4, 0, 786455, 4, 0, 786456, 4, 0, 786457, 4, 0, 786458, 4, 0, 786459, 4, 0, 786460, 4, 0, 786461, 5, 0, 851968, 3, 0, 851969, 4, 0, 851970, 4, 0, 851971, 4, 0, 851972, 4, 0, 851973, 4, 0, 851974, 4, 0, 851975, 4, 0, 851977, 4, 0, 851978, 4, 0, 851979, 4, 0, 851980, 4, 0, 851981, 4, 0, 851982, 4, 0, 851983, 4, 0, 851985, 9, 0, 851988, 4, 0, 851989, 4, 0, 851990, 4, 0, 851991, 4, 0, 851992, 4, 0, 851993, 4, 0, 851994, 4, 0, 851995, 4, 0, 851996, 4, 0, 851997, 5, 0, 917504, 3, 0, 917505, 4, 0, 917506, 4, 0, 917507, 4, 0, 917508, 4, 0, 917509, 4, 0, 917510, 4, 0, 917511, 4, 0, 917513, 4, 0, 917514, 4, 0, 917515, 4, 0, 917516, 4, 0, 917517, 4, 0, 917518, 4, 0, 917519, 4, 0, 917521, 4, 0, 917522, 4, 0, 917523, 4, 0, 917524, 4, 0, 917525, 4, 0, 917526, 4, 0, 917527, 4, 0, 917528, 4, 0, 917529, 4, 0, 917530, 4, 0, 917531, 4, 0, 917532, 4, 0, 917533, 5, 0, 983040, 3, 0, 983041, 4, 0, 983042, 4, 0, 983043, 4, 0, 983044, 4, 0, 983045, 4, 0, 983046, 4, 0, 983047, 4, 0, 983048, 12, 0, 983049, 4, 0, 983050, 4, 0, 983051, 4, 0, 983052, 4, 0, 983053, 4, 0, 983054, 4, 0, 983055, 4, 0, 983056, 12, 0, 983057, 4, 0, 983058, 4, 0, 983059, 4, 0, 983060, 4, 0, 983061, 4, 0, 983062, 4, 0, 983063, 4, 0, 983064, 4, 0, 983065, 4, 0, 983066, 4, 0, 983067, 4, 0, 983068, 4, 0, 983069, 5, 0, 1048576, 1, 0, 1048577, 1, 0, 1048578, 1, 0, 1048579, 1, 0, 1048580, 1, 0, 1048581, 1, 0, 1048582, 1, 0, 1048583, 1, 0, 1048584, 1, 0, 1048585, 1, 0, 1048586, 1, 0, 1048587, 1, 0, 1048588, 1, 0, 1048589, 1, 0, 1048590, 1, 0, 1048591, 1, 0, 1048592, 1, 0, 1048593, 1, 0, 1048594, 1, 0, 1048595, 1, 0, 1048596, 1, 0, 1048597, 1, 0, 1048598, 1, 0, 1048599, 1, 0, 1048600, 1, 0, 1048601, 1, 0, 1048602, 1, 0, 1048603, 1, 0, 1048604, 1, 0, 1048605, 1, 0 )
+
+[node name="Doors" type="Node2D" parent="."]
+
+[node name="Door3" type="KinematicBody2D" parent="Doors"]
+position = Vector2( 170.299, 324.025 )
+script = ExtResource( 12 )
+
+[node name="Sprite" type="Sprite" parent="Doors/Door3"]
+position = Vector2( -90.4941, 629.844 )
+scale = Vector2( 0.841081, 0.947027 )
+texture = ExtResource( 1 )
+
+[node name="OpenDoor" type="AnimationPlayer" parent="Doors/Door3"]
+anims/close_door = SubResource( 10 )
+anims/open_door = SubResource( 11 )
+
+[node name="Area2D" type="Area2D" parent="Doors/Door3"]
+position = Vector2( -95.7914, 622.428 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door3/Area2D"]
+position = Vector2( 5.68124, 11.2482 )
+shape = SubResource( 12 )
+
+[node name="Label" type="Label" parent="Doors/Door3"]
+margin_left = -97.7999
+margin_top = 475.36
+margin_right = -61.7999
+margin_bottom = 547.359
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Door4" type="KinematicBody2D" parent="Doors"]
+position = Vector2( 170.299, 324.025 )
+script = ExtResource( 14 )
+
+[node name="Sprite" type="Sprite" parent="Doors/Door4"]
+position = Vector2( 280.03, 631.258 )
+scale = Vector2( 0.841081, 0.947027 )
+texture = ExtResource( 1 )
+
+[node name="OpenDoor" type="AnimationPlayer" parent="Doors/Door4"]
+anims/close_door = SubResource( 14 )
+anims/open_door = SubResource( 15 )
+
+[node name="Area2D" type="Area2D" parent="Doors/Door4"]
+position = Vector2( 274.733, 623.842 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door4/Area2D"]
+position = Vector2( 5.68124, 11.2482 )
+shape = SubResource( 16 )
+
+[node name="Label" type="Label" parent="Doors/Door4"]
+margin_left = 274.857
+margin_top = 477.604
+margin_right = 310.857
+margin_bottom = 549.604
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Door4_2" type="KinematicBody2D" parent="Doors"]
+position = Vector2( 170.299, 324.025 )
+script = ExtResource( 15 )
+
+[node name="Sprite" type="Sprite" parent="Doors/Door4_2"]
+position = Vector2( 1658.89, -122.517 )
+scale = Vector2( 0.841081, 0.947027 )
+texture = ExtResource( 1 )
+
+[node name="OpenDoor" type="AnimationPlayer" parent="Doors/Door4_2"]
+anims/close_door = SubResource( 18 )
+anims/open_door = SubResource( 19 )
+
+[node name="Area2D" type="Area2D" parent="Doors/Door4_2"]
+position = Vector2( 1653.59, -129.934 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door4_2/Area2D"]
+position = Vector2( 5.68124, 12.6625 )
+shape = SubResource( 20 )
+
+[node name="Label" type="Label" parent="Doors/Door4_2"]
+margin_left = 490.37
+margin_top = 479.849
+margin_right = 526.37
+margin_bottom = 551.849
+custom_fonts/font = SubResource( 21 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Door5" type="KinematicBody2D" parent="Doors"]
+position = Vector2( 170.299, 324.025 )
+script = ExtResource( 16 )
+
+[node name="Sprite" type="Sprite" parent="Doors/Door5"]
+position = Vector2( 500.647, 634.087 )
+scale = Vector2( 0.841081, 0.947027 )
+texture = ExtResource( 1 )
+
+[node name="OpenDoor" type="AnimationPlayer" parent="Doors/Door5"]
+anims/close_door = SubResource( 22 )
+anims/open_door = SubResource( 23 )
+
+[node name="Area2D" type="Area2D" parent="Doors/Door5"]
+position = Vector2( 495.35, 626.671 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door5/Area2D"]
+position = Vector2( 5.68124, 12.6625 )
+shape = SubResource( 24 )
+
+[node name="Label" type="Label" parent="Doors/Door5"]
+margin_left = 1650.0
+margin_top = -287.915
+margin_right = 1686.0
+margin_bottom = -215.915
+custom_fonts/font = SubResource( 25 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Door8" type="KinematicBody2D" parent="Doors"]
+position = Vector2( 170.299, 324.025 )
+script = ExtResource( 17 )
+
+[node name="Sprite" type="Sprite" parent="Doors/Door8"]
+position = Vector2( 1694.56, 633.818 )
+scale = Vector2( 0.841081, 0.947027 )
+texture = ExtResource( 1 )
+
+[node name="OpenDoor" type="AnimationPlayer" parent="Doors/Door8"]
+anims/close_door = SubResource( 26 )
+anims/open_door = SubResource( 27 )
+
+[node name="Area2D" type="Area2D" parent="Doors/Door8"]
+position = Vector2( 1689.27, 626.402 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door8/Area2D"]
+position = Vector2( 5.68124, 12.6625 )
+shape = SubResource( 28 )
+
+[node name="Label" type="Label" parent="Doors/Door8"]
+margin_left = 1684.67
+margin_top = 479.849
+margin_right = 1720.67
+margin_bottom = 551.849
+custom_fonts/font = SubResource( 29 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Door0" type="KinematicBody2D" parent="Doors"]
+position = Vector2( 170.299, 324.025 )
+script = ExtResource( 18 )
+
+[node name="Sprite" type="Sprite" parent="Doors/Door0"]
+position = Vector2( 1057.15, 629.061 )
+scale = Vector2( 0.841081, 0.947027 )
+texture = ExtResource( 1 )
+
+[node name="OpenDoor" type="AnimationPlayer" parent="Doors/Door0"]
+anims/close_door = SubResource( 30 )
+anims/open_door = SubResource( 31 )
+
+[node name="Area2D" type="Area2D" parent="Doors/Door0"]
+position = Vector2( 1051.85, 621.645 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door0/Area2D"]
+position = Vector2( 5.68124, 11.8216 )
+shape = SubResource( 32 )
+
+[node name="Label" type="Label" parent="Doors/Door0"]
+margin_left = 1040.38
+margin_top = 475.36
+margin_right = 1076.38
+margin_bottom = 547.359
+custom_fonts/font = SubResource( 33 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stairs" type="Node2D" parent="."]
+
+[node name="Ghost" parent="." instance=ExtResource( 8 )]
+position = Vector2( 940.753, 846.028 )
+
+[node name="MovingTrap" parent="." instance=ExtResource( 9 )]
+position = Vector2( 872, 488 )
+
+[node name="MovingTrap2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1322.26, 206.533 )
+
+[node name="EnemyGhost" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1357.73, 716.283 )
+collision_layer = 0
+collision_mask = 0
+
+[node name="Torch2" type="TileMap" parent="."]
+tile_set = SubResource( 34 )
+format = 1
+tile_data = PoolIntArray( 196615, 0, 0, 262147, 2, 0, 262150, 7, 0, 327694, 1, 0, 327700, 1, 0, 458777, 0, 0, 655362, 2, 0, 851971, 11, 0, 851972, 8, 0, 917509, 0, 0, 917529, 0, 0 )
+
+[node name="Light2D" type="Light2D" parent="Torch2"]
+position = Vector2( 348.215, 931.272 )
+texture = ExtResource( 4 )
+shadow_enabled = true
+
+[node name="Light2D4" type="Light2D" parent="Torch2"]
+position = Vector2( 479.53, 225.848 )
+texture = ExtResource( 4 )
+shadow_enabled = true
+
+[node name="Light2D2" type="Light2D" parent="Torch2"]
+position = Vector2( 1632.4, 484.179 )
+texture = ExtResource( 4 )
+shadow_enabled = true
+
+[node name="Light2D5" type="Light2D" parent="Torch2"]
+position = Vector2( 1311.74, 339.725 )
+texture = ExtResource( 4 )
+shadow_enabled = true
+
+[node name="Light2D6" type="Light2D" parent="Torch2"]
+position = Vector2( 926.382, 339.264 )
+texture = ExtResource( 4 )
+shadow_enabled = true
+
+[node name="Light2D3" type="Light2D" parent="Torch2"]
+position = Vector2( 1632.28, 916.439 )
+texture = ExtResource( 4 )
+shadow_enabled = true
+
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2( 1657.45, 844.797 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.0941176, 0.0392157, 0.0392157, 1 )
+
+[node name="Kali6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 432.261, 639.916 )
+script = SubResource( 35 )
+
+[node name="Plus5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 221.148, 355.093 )
+script = SubResource( 36 )
+
+[node name="Bagi5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 214.96, 193.771 )
+script = SubResource( 37 )
+
+[node name="Kali5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 409.491, 150.401 )
+script = SubResource( 38 )
+
+[node name="Plus4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1536.68, 165.703 )
+script = SubResource( 39 )
+
+[node name="Plus3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 987.42, 192.822 )
+script = SubResource( 40 )
+
+[node name="Bagi9" parent="." instance=ExtResource( 7 )]
+position = Vector2( 699.246, 161.038 )
+script = SubResource( 41 )
+
+[node name="Kali4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 644.154, 635.678 )
+script = SubResource( 42 )
+
+[node name="Plus2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 858.165, 953.517 )
+script = SubResource( 43 )
+
+[node name="Kali0" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1493.84, 567.872 )
+script = SubResource( 44 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+autoplay = true
+
+[connection signal="animation_finished" from="Doors/Door3/OpenDoor" to="Doors/Door3" method="_on_OpenDoor_animation_finished"]
+[connection signal="body_entered" from="Doors/Door3/Area2D" to="Doors/Door3" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Doors/Door3/Area2D" to="Doors/Door3" method="_on_Area2D_body_exited"]
+[connection signal="animation_finished" from="Doors/Door4/OpenDoor" to="Doors/Door4" method="_on_OpenDoor_animation_finished"]
+[connection signal="body_entered" from="Doors/Door4/Area2D" to="Doors/Door4" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Doors/Door4/Area2D" to="Doors/Door4" method="_on_Area2D_body_exited"]
+[connection signal="animation_finished" from="Doors/Door4_2/OpenDoor" to="Doors/Door4_2" method="_on_OpenDoor_animation_finished"]
+[connection signal="body_entered" from="Doors/Door4_2/Area2D" to="Doors/Door4_2" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Doors/Door4_2/Area2D" to="Doors/Door4_2" method="_on_Area2D_body_exited"]
+[connection signal="animation_finished" from="Doors/Door5/OpenDoor" to="Doors/Door5" method="_on_OpenDoor_animation_finished"]
+[connection signal="body_entered" from="Doors/Door5/Area2D" to="Doors/Door5" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Doors/Door5/Area2D" to="Doors/Door5" method="_on_Area2D_body_exited"]
+[connection signal="animation_finished" from="Doors/Door8/OpenDoor" to="Doors/Door8" method="_on_OpenDoor_animation_finished"]
+[connection signal="body_entered" from="Doors/Door8/Area2D" to="Doors/Door8" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Doors/Door8/Area2D" to="Doors/Door8" method="_on_Area2D_body_exited"]
+[connection signal="animation_finished" from="Doors/Door0/OpenDoor" to="Doors/Door0" method="_on_OpenDoor_animation_finished"]
+[connection signal="body_entered" from="Doors/Door0/Area2D" to="Doors/Door0" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Doors/Door0/Area2D" to="Doors/Door0" method="_on_Area2D_body_exited"]

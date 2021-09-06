@@ -1,0 +1,131 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://UI/Background.png" type="Texture" id=1]
+[ext_resource path="res://UI/fade_in/fade_in.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Audio/Menu.mp3" type="AudioStream" id=3]
+[ext_resource path="res://UI/Button.gd" type="Script" id=4]
+[ext_resource path="res://UI/MainScreen.gd" type="Script" id=5]
+[ext_resource path="res://UI/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+font_data = ExtResource( 6 )
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends Button
+
+
+export(String) var scene_to_load
+"
+
+[sub_resource type="DynamicFont" id=3]
+size = 120
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 48
+font_data = ExtResource( 6 )
+
+[node name="MainScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 120.0
+margin_top = 540.0
+margin_right = 1800.0
+margin_bottom = 1000.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_right = 1680.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 0, 120 )
+flat = true
+script = ExtResource( 4 )
+scene_to_load = "res://start_game.tscn"
+
+[node name="Label" type="Label" parent="VBoxContainer/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -452.0
+margin_top = -74.1189
+margin_bottom = 69.8811
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "Start Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+margin_top = 124.0
+margin_right = 1680.0
+margin_bottom = 244.0
+rect_min_size = Vector2( 0, 120 )
+flat = true
+script = SubResource( 2 )
+
+[node name="Label" type="Label" parent="VBoxContainer/Quit"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -452.0
+margin_top = -74.1189
+margin_bottom = 69.8811
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+text = "Quit"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Version Label" type="Label" parent="."]
+margin_left = 120.0
+margin_top = 923.0
+margin_right = 1800.0
+margin_bottom = 1000.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Version 1.1
+No Tin Can Studio"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fade_in" parent="." instance=ExtResource( 2 )]
+visible = false
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="fade_finished" from="fade_in" to="." method="_on_fade_in_fade_finished"]

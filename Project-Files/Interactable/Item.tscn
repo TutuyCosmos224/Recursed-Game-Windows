@@ -1,0 +1,94 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Interactable/Item.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprite/Item/Divide.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprite/Item/Multiply.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprite/Item/Minus.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprite/Item/Log.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprite/Item/Plus.png" type="Texture" id=6]
+[ext_resource path="res://UI/Fonts/bebas_neue/BebasNeue-Regular.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 22
+font_data = ExtResource( 7 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Divide",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Multiply",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Plus",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Log",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Minus",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 22.1877, 25.1264 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 35
+outline_color = Color( 0.00392157, 0, 0, 1 )
+font_data = ExtResource( 7 )
+
+[node name="Item" type="Area2D"]
+scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -90.1354
+margin_top = -65.8111
+margin_right = -11.1354
+margin_bottom = -8.81112
+custom_fonts/font = SubResource( 1 )
+text = "Press E
+To Take"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -0.79937, -0.0582199 )
+scale = Vector2( 0.460179, 0.460179 )
+frames = SubResource( 2 )
+animation = "Divide"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.102123, -0.198425 )
+shape = SubResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -28.2292
+margin_top = -18.315
+margin_right = 26.7708
+margin_bottom = 69.685
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.690196, 0.67451, 0.67451, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.0509804, 0.0392157, 0.0392157, 1 )
+text = "log"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="." to="." method="_on_Item_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_Item_body_exited"]

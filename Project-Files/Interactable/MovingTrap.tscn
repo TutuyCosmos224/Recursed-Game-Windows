@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Interactable/MovingTrap.gd" type="Script" id=1]
+[ext_resource path="res://Interactable/HoveringTrap.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 29.6001, 27.9542 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 42.0726, 42.2086 )
+
+[node name="MovingTrap1" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.472918, 0.470339 )
+scale = Vector2( 1.34196, 1.34196 )
+texture = ExtResource( 2 )
+
+[node name="DetectionAndHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionAndHitbox"]
+modulate = Color( 0.529412, 0.819608, 0.00392157, 1 )
+shape = SubResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="body_entered" from="DetectionAndHitbox" to="." method="_on_DetectionAndHitbox_body_entered"]
+[connection signal="body_exited" from="DetectionAndHitbox" to="." method="_on_DetectionAndHitbox_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

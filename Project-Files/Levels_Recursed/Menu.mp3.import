@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Menu.mp3-8af3fbe280d4ac34548a18ce3f66da96.mp3str"
+
+[deps]
+
+source_file="res://Levels_Recursed/Menu.mp3"
+dest_files=[ "res://.import/Menu.mp3-8af3fbe280d4ac34548a18ce3f66da96.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
