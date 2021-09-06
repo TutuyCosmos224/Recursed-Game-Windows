@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://HUD/Key.gd" type="Script" id=1]
+[ext_resource path="res://Assets/key_flip.png" type="Texture" id=2]
+
+[node name="Key" type="Node2D"]
+scale = Vector2( 1, 0.99655 )
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -107.477, -12.3128 )
+scale = Vector2( 1.28118, 1.28118 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -61.9175
+margin_top = -35.2938
+margin_right = -21.9175
+margin_bottom = -21.2938
+rect_scale = Vector2( 2.27342, 2.96274 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "asdf"
+__meta__ = {
+"_edit_use_anchors_": false
+}

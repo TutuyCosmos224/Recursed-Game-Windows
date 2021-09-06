@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://HUD/ProgressBar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://HUD/Health.tscn" type="PackedScene" id=2]
+
+[node name="HealthBar" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" parent="." instance=ExtResource( 1 )]
+anchor_left = 0.083
+anchor_top = 0.12
+anchor_right = 0.083
+anchor_bottom = 0.12
+margin_left = -83.2313
+margin_top = -79.4984
+margin_right = 396.769
+margin_bottom = -29.4984
+
+[node name="Health" parent="." instance=ExtResource( 2 )]
+
+[connection signal="changed" from="Health" to="ProgressBar" method="set_value"]
+[connection signal="max_changed" from="Health" to="ProgressBar" method="set_max"]
