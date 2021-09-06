@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogic/Dialog.tscn" type="PackedScene" id=1]
+
+[node name="Cutscene" type="Node2D"]
+
+[node name="DialogNode" parent="." instance=ExtResource( 1 )]
+margin_left = 1051.63
+margin_top = 1089.34
+margin_right = 1051.63
+margin_bottom = 1089.34
+timeline = "timeline-1629557010.json"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 1327.33
+margin_top = 1024.77
+margin_right = 1399.33
+margin_bottom = 1038.77
+text = "Press Enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}

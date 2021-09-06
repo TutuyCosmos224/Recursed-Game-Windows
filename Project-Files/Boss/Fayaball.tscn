@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Sprite/Boss/fayaball.png" type="Texture" id=1]
+[ext_resource path="res://Boss/Fayaball.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 12.3536
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 13.1845
+
+[sub_resource type="Animation" id=3]
+resource_name = "Faya"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 3 ]
+}
+
+[node name="Fayaball" type="RigidBody2D"]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 2.82838, -0.793028 )
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 2.65477, -0.790738 )
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 7.9121, -0.270193 )
+rotation = 3.14159
+scale = Vector2( 1.97213, 1.93032 )
+texture = ExtResource( 1 )
+hframes = 4
+frame = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Faya = SubResource( 3 )
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Boss/Laser.gd" type="Script" id=1]
+[ext_resource path="res://Assets/laser.png" type="Texture" id=2]
+
+[node name="Laser" type="Area2D"]
+gravity = 0.0
+collision_layer = 17
+collision_mask = 17
+script = ExtResource( 1 )
+
+[node name="Polygon" type="Polygon2D" parent="."]
+position = Vector2( -195.088, -16.8179 )
+scale = Vector2( 6.16601, 0.52142 )
+texture = ExtResource( 2 )
+polygon = PoolVector2Array( 31.4417, -31.3892, 31.4831, 95.1332, -895.184, 95.5615, -895.119, -32.9279 )
+
+[node name="Area2D" type="Area2D" parent="Polygon"]
+scale = Vector2( 0.162179, 1.91784 )
+collision_layer = 17
+collision_mask = 17
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon/Area2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Polygon"]
+polygon = PoolVector2Array( 0, 0 )
+
+[connection signal="area_entered" from="." to="." method="_on_Laser_area_entered"]
+[connection signal="body_entered" from="Polygon/Area2D" to="." method="_on_Area2D_body_entered"]
