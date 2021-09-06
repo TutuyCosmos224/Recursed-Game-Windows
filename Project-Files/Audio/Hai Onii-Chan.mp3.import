@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Hai Onii-Chan.mp3-5aa557ce1903fa87a004826c304e8271.mp3str"
+
+[deps]
+
+source_file="res://Audio/Hai Onii-Chan.mp3"
+dest_files=[ "res://.import/Hai Onii-Chan.mp3-5aa557ce1903fa87a004826c304e8271.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

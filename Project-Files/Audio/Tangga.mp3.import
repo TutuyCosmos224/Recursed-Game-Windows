@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Tangga.mp3-00089bfeb75c46394c43948f91ead8a1.mp3str"
+
+[deps]
+
+source_file="res://Audio/Tangga.mp3"
+dest_files=[ "res://.import/Tangga.mp3-00089bfeb75c46394c43948f91ead8a1.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

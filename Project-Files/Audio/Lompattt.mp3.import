@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Lompattt.mp3-7d6aea44bb353781ce2c7f61da3a8278.mp3str"
+
+[deps]
+
+source_file="res://Audio/Lompattt.mp3"
+dest_files=[ "res://.import/Lompattt.mp3-7d6aea44bb353781ce2c7f61da3a8278.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

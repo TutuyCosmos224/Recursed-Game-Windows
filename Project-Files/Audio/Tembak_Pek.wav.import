@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Tembak_Pek.wav-a666cfbd15e6c46bcd5889e205505193.sample"
+
+[deps]
+
+source_file="res://Audio/Tembak_Pek.wav"
+dest_files=[ "res://.import/Tembak_Pek.wav-a666cfbd15e6c46bcd5889e205505193.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
