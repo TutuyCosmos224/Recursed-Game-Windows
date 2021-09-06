@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Audio/BGM.mp3" type="AudioStream" id=1]
+[ext_resource path="res://GlobalMusic.gd" type="Script" id=2]
+[ext_resource path="res://AudioStreamPlayer.gd" type="Script" id=3]
+
+[node name="Music" type="KinematicBody2D"]
+script = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[connection signal="play" from="." to="AudioStreamPlayer" method="_on_Music_play"]
